@@ -1,0 +1,207 @@
+/* ===== RESET HOÀN TOÀN ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #000;
+}
+
+/* ===== VIDEO NỀN PHỦ KÍN ===== */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===== BIO CONTAINER ===== */
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* ===== List Màu Chữ Cạnh Icon ===== */
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(
+        45deg, 
+        #FFF5F7, #000, #FFE4E9, #FFDDE5, #FFD1DC, #FFC0CB, #FFB6C1, #FFAFBD,
+        #FFA6C9, #FF9EB5, #FF91B7, #FF85A1, #FF69B4, #FF6F91, #FF5C8A, #FF4F81,
+        #FF4081, #F83E7B, #F72585, #FF1493, #E91E63, #D81B60, #C2185B, #AD1457,
+        #9C0F48, #880E4F, #800040, #660033, #4A0026, #ff0000, #ff7300, #fffb00,
+        #00ffd5, #002bff, #7a00ff, #ff00c8, #4b0082, #9400d3, #ff7f00, #ffff00,
+        #48ff00, #0000ff, #bb86fc, #e0e0e0, #00d4ff, #00F5D4, #7B2CBF, #FF9100,
+        #3A86FF, #FB5607, #FF007F, #7209B7, #4CC9F0, #39FF14, #FFD700, #A855F7, 
+        #F43F5E, #06B6D4, #10B981, #F59E0B, #EC4899, #8B5CF6, #3B82F6, #14B8A6, 
+        #F97316, #E11D48, #6366F1, #0EA5E9, #84CC16, #D946EF, #FFE4E9, #FFF5F7
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowAnimation 5s ease infinite;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+    margin: 0;
+}
+/* Gắn Ảnh(Chuột) */
+html, body, * {
+    cursor: url("pictures/avata1.png") 32 32, auto !important;
+}       
+@keyframes rainbowAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #ba83ee;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* ===== DÀN Ô MẠNG XÃ HỘI ===== */
+.social-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    text-decoration: none;
+    color: #c78eff;
+    font-size: 0.75rem;
+    gap: 12px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.icon-box {
+    font-size: 2.4rem;
+}
+
+.tiktok { color: #ffffff; }
+.discord { color: #5865f2; }
+.facebook { color: #1877f2; }
+
+/* ===== NÚT BẬT/TẮT NHẠC GÓC DƯỚI ===== */
+.music-player {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#musicBtn, #nextBtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #8a52cb;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.2s ease;
+}
+
+#nextBtn {
+    padding: 8px 12px;
+}
+
+#musicBtn:hover, #nextBtn:hover {
+    background: #9b5de5;
+}
+
+/* RESPONSIVE MÀN HÌNH NHỎ */
+@media (max-width: 600px) {
+    .social-row {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .card {
+        width: 110px;
+        height: 110px;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info+Sever-Hiếu</title>
+    <link id="favicon" rel="icon" type="image/png" href="pictures/avata3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- VIDEO NỀN -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="videos/nen.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <div class="bio-container">
+        <div class="profile-header">
+            <img src="pictures/avata3.png" alt="Avatar" class="avatar">
+            <h1 class="title">Hiếu</h1>
+        </div>
+
+        <p class="subtitle">Thông Tin Tôi(My Info)</p>
+
+        <!-- LIST MẠNG XÃ HỘI -->
+        <div class="social-row">
+            <a href="https://www.tiktok.com/@vietphong.123" target="_blank" class="card">
+                <div class="icon-box tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <span>TikTok</span>
+            </a>
+
+            <a href="https://discord.com/channels/@me" target="_blank" class="card">
+                <div class="icon-box discord">
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+                <span>Discord(Me)</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61571782817254" target="_blank" class="card">
+                <div class="icon-box facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <span>Facebook</span>
+            </a>
+        </div>
+    </div>
+
+    <!--Nhạc Đầu Tiên Chạy-->
+    <div class="music-player">
+        <audio id="myAudio" preload="auto">
+            <source id="audioSource" src="videos/nhac2.mp3" type="audio/mpeg">
+        </audio>
+        
+        <button id="musicBtn" onclick="toggleMusic()">
+            <i id="musicIcon" class="fa-solid fa-volume-xmark"></i> 
+            <span id="musicText">Bật nhạc</span>
+        </button>
+
+        <button id="nextBtn" onclick="nextSong()" title="Bài tiếp theo">
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+    </div>
+</body>
+</html>
